@@ -1,15 +1,17 @@
 import express from "express";
 import axios from "axios";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
+app.use(bodyParser.urlencoded({ extended: true }));
 // Define your API key as a constant
-//const API_KEY = 'f56f8d2631b45cd9bd5791cb953a3115';
+const API_KEY = 'f56f8d2631b45cd9bd5791cb953a3115';
 
 // main url http://api.openweathermap.org/data/2.5/weather?lat=51.5074&lon=-0.1278&appid=f56f8d2631b45cd9bd5791cb953a3115
 
 // Define the base URL as a constant
-const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather';
+const WEATHER_URL = 'http://api.openweathermap.org/data/2.5/weather';
 
 
 // Combine everything to create the full URL
